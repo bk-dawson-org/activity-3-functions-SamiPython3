@@ -4,9 +4,16 @@ radius = float(input("Enter a value for the radius"))
 height = float(input("Enter a value for the height"))
 
 def getCylinderVolume(radius, height) :
+    '''
+        This function calculates the volume of a cylinder
+        param radius: This is the radius of the cylinder
+        param height: This is the height of the cylinder
+        return : The function returns the volume of a cylinder
+    '''
     volume = (radius ** 2) * math.pi * height
     return volume
 
+# Calculates the volume of a cylinder with values (1, 1) and (2, 6)
 volume1 = getCylinderVolume(1, 1)
 volume2 = getCylinderVolume(2, 6)
 print("Volume 1 =", round(volume1, 3))
@@ -20,8 +27,9 @@ def getNumberOfSlices(radius, height, volumeOfSlice) :
     numberOfSlices = volume / volumeOfSlice
     return numberOfSlices
 
-numberOfSlices1 = getNumberOfSlices(10, 10, 100)
-print("Number of slices for the given volume =", int(numberOfSlices1))
+# Calculating the number of slices
+numberOfSlices1 = getNumberOfSlices(2, 4, 5)
+#print("Number of slices for the given volume =", int(numberOfSlices1))
 
 
 
